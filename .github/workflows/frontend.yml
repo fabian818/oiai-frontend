@@ -34,6 +34,9 @@ jobs:
       - name: Build project
         run: yarn build
 
+      - name: Copy script file
+        run: cp script.js dist/script.js
+
       - name: Deploy to S3
         run: aws s3 cp dist/ s3://web.oiai.thisguydeploys.com/ --recursive --exclude ".git/*" --exclude ".github/*"
 
