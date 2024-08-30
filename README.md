@@ -13,14 +13,14 @@ Available on https://web.oiai.thisguydeploys.com/
 
 ## Project Structure
 
-<<<
+``` bash
 .
 ├── index.html       # Main HTML file
 ├── package.json     # Node.js dependencies and scripts
 ├── script.js        # JavaScript logic for interacting with oiai-backend
 ├── styles.css       # Styles for the frontend
 └── yarn.lock        # Dependency lock file
->>>
+```
 
 ## Getting Started
 
@@ -34,22 +34,22 @@ Available on https://web.oiai.thisguydeploys.com/
 
 1. Clone the repository:
 
-   <<< 
+   ``` bash 
    git clone https://github.com/fabian818/oiai-frontend.git
    cd oiai-frontend
-   >>>
+   ```
 
 2. Install the dependencies:
 
-   <<< 
+   ``` bash 
    yarn install
-   >>>
+   ```
 
 3. Start the development server with Vite:
 
-   <<< 
+   ``` bash 
    yarn dev
-   >>>
+   ```
 
 4. Open your browser and navigate to `http://localhost:3000` to see the application.
 
@@ -62,7 +62,7 @@ The CI/CD pipeline is configured using **GitHub Actions** to automate the deploy
 
 ### GitHub Actions Workflow
 
-<<<
+``` bash
 - name: Configure AWS Credentials
   uses: aws-actions/configure-aws-credentials@v3
   with:
@@ -85,7 +85,7 @@ The CI/CD pipeline is configured using **GitHub Actions** to automate the deploy
 
 - name: Deploy to S3
   run: aws s3 cp dist/ s3://web.oiai.thisguydeploys.com/ --recursive --exclude ".git/*" --exclude ".github/*"
->>>
+```
 
 ## Deployment
 
