@@ -93,7 +93,7 @@ The frontend application is automatically deployed to an S3 bucket: `s3://web.oi
 
 ### Disclaimer
 
-While deploying to S3, the preferred deployment stack would have included both **S3 and CloudFront** for optimized content delivery. However, due to an AWS Service Quota limitation in my account, creating additional CloudFront distributions was not possible.
+While deploying to S3, the preferred deployment stack would have included both **S3 and CloudFront** for optimized content delivery. However, due to an AWS Service Quota limitation in my account, creating additional CloudFront distributions was not possible for now.
 
 ## Future Enhancements
 
