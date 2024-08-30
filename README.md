@@ -2,7 +2,7 @@
 
 **oiai-frontend** is a lightweight frontend application designed for testing an endpoint of the `oiai-backend` service. It is built using simple HTML, CSS, and JavaScript, and utilizes Vite for local development.
 
-Available on http://web.oiai.thisguydeploys.com/
+Available on https://web.oiai.thisguydeploys.com/
 
 ## Features
 
