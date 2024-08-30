@@ -99,4 +99,3 @@ While deploying to S3, the preferred deployment stack would have included both *
 
 - **CloudFront Integration**: Once the service quota issue is resolved, migrate to an S3/CloudFront stack for better performance and caching.
 - **Enhanced Testing**: Include automated end-to-end tests to validate the frontend against the backend.
-- **CI/CD Improvements**: Add a rollback strategy for deployments.
