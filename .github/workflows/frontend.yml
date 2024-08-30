@@ -13,6 +13,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v3
+        with:
+          role-to-assume: arn:aws:iam::132900311735:role/oiai-dev-github-role
+          aws-region: us-east-1
+
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
@@ -21,14 +27,13 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Load environment variables
-        run: cp .env.example .env
-
       - name: Build project
         run: yarn build
 
       - name: Deploy to S3
-        run: aws s3 cp dist/ s3://your-s3-bucket/ --recursive --exclude ".git/*" --exclude ".github/*"
+        run: aws s3 cp dist/ s3://web.oiai.thisguydeploys.com/ --recursive --exclude ".git/*" --exclude ".github/*"
 
-      - name: Invalidate CloudFront
-        run: aws cloudfront create-invalidation --distribution-id YOUR_CLOUDFRONT_ID --paths "/*"
+      # disabled due to service quota issues
+      
+      # - name: Invalidate CloudFront
+      #   run: aws cloudfront create-invalidation --distribution-id {} --paths "/*"
